@@ -96,7 +96,7 @@ function sumArray(sumArr) { //eslint-disable-line
     var firstSumArr =sum(testArray[0],testArray[1]);
     var resultSumArr =sum(firstSumArr[0],testArray[2]);
     var message= `${testArray[0]},${testArray[1]},${testArray[2]} was passed in as an array of numbers, and ${resultSumArr[0]} is their sum.`;
-    console.log(message);
+    // console.log(message);
     return [resultSumArr[0],message]
 
 }
@@ -119,11 +119,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+ var firstMultiArray =multiply(testArray[0],testArray[1]);
+ var resultMultiArray =multiply(firstMultiArray[0],testArray[2]);
+ var message =`The numbers ${testArray[0]},${testArray[1]},${testArray[2]} have a product of ${resultMultiArray[0]}.`;
+ return [resultMultiArray[0],message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
@@ -148,9 +151,24 @@ var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
+for(var i=0;i<testDynamicArray.length;i++){
+    var resultMultiDynArray = multiply(testDynamicArray[0],testDynamicArray[1]);
+    // console.log(resultMultiDynArray[0]);
+    var resultMultiDynArray1 = multiply(resultMultiDynArray[0],testDynamicArray[2]);
+    // console.log(resultMultiDynArray1[0]);
+    var resultMultiDynArray2 = multiply(resultMultiDynArray1[0],testDynamicArray[3]);
+    // console.log(resultMultiDynArray2[0]);
+    var resultMultiDynArray3 = multiply(resultMultiDynArray2[0],testDynamicArray[4]);
+    // console.log(resultMultiDynArray3[0]);
+   
+}
+
+    var message =`The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${resultMultiDynArray3[0]}.`;
+    // console.log(message);
+    return[resultMultiDynArray3[0],message];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testDynamicArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
