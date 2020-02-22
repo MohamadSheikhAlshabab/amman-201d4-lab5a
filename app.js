@@ -151,7 +151,7 @@ var testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) { //eslint-disable-line
 
-for(var i=0;i<testDynamicArray.length;i++){
+// for(var i=0;i<testDynamicArray.length;i++){
     var resultMultiDynArray = multiply(testDynamicArray[0],testDynamicArray[1]);
     // console.log(resultMultiDynArray[0]);
     var resultMultiDynArray1 = multiply(resultMultiDynArray[0],testDynamicArray[2]);
@@ -161,7 +161,7 @@ for(var i=0;i<testDynamicArray.length;i++){
     var resultMultiDynArray3 = multiply(resultMultiDynArray2[0],testDynamicArray[4]);
     // console.log(resultMultiDynArray3[0]);
    
-}
+// }
 
     var message =`The numbers ${testDynamicArray[0]},${testDynamicArray[1]},${testDynamicArray[2]},${testDynamicArray[3]},${testDynamicArray[4]} have a product of ${resultMultiDynArray3[0]}.`;
     // console.log(message);
